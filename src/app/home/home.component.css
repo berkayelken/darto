@@ -1,0 +1,62 @@
+.darto-logo{
+   width: 97px;
+}
+
+.manifest-title {
+    height: 104px;
+    padding-top: 24px;
+    font-size: 48px;
+    line-height: 52px;
+    color: white;
+}
+
+.manifest-alt-title {
+    padding-top: 60px;
+    height: 24px;
+    font-size: 16px;
+    color: #CED4DE;
+}
+
+.manifest-container {
+    padding-left: 121px;
+    width: 327px;
+    padding-top: 121px;
+}
+
+.sign-in-container {
+    position: absolute;
+    bottom: 60px;
+    left: 121px;
+    width: 327px;
+    height: 136px;
+}
+
+.login-button {
+    margin-top: 12px;
+    height: 56px;
+    width: 100%;
+    border: 0px;
+    border-radius: 8px;
+    background-color:#98DED9;
+    color: #1F2B42;;
+}
+
+.sign-up-button {
+    margin-top: 12px;
+    height: 56px;
+    width: 100%;
+    border: 0px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;;
+}
+
+@media (max-width: 600px) {
+    .manifest-container {
+        padding-left: 48px !important;
+    }
+    .sign-in-container {
+        left: 48px !important;
+    }
+  }
+
