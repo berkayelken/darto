@@ -27,21 +27,6 @@
     margin-bottom: 24px;
 }
 
-input {
-    margin-top: 12px;
-    height: 56px;
-    border: 0px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.5);
-    padding-left: 24px;
-    width: calc(100% - 24px);
-}
-
-input::placeholder {
-    padding-left: -12px;
-}
-
 .sign-in-container {
     padding-left: 121px;
     width: 327px;
