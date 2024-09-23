@@ -25,7 +25,11 @@ export class SignInComponent {
     let plainToken = this.email + ":" + this.password
     let authToken = "Basic " + btoa(plainToken)
     let headers = new HttpHeaders().set(this.authorizationHeader, authToken)
-    this.httpClient.post("/api/auth/login", {}, {headers: headers}).subscribe(res => this.setCookie(res))
+    this.httpClient.post("/api/auth/login", {}, {headers: headers}).subscribe(res => {
+      this.setCookie(res)
+      this.router.navigate(['/art-gallery'])
+  })
+    
   }
   
   private setCookie(authResponse: any) {
