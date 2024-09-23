@@ -23,7 +23,10 @@ export class AppComponent {
     let cpath: string = `; path=${this.authCookiePath}`;
     this.document.cookie = `token=${authResponse.token}; ${expires}${cpath}`;
     this.document.cookie = `email=${authResponse.email}; ${expires}${cpath}`;
+    this.document.cookie = `wallet=${authResponse.wallet}; ${expires}${cpath}`;
     this.document.defaultView?.localStorage.setItem("token", authResponse.token)
+    this.document.defaultView?.localStorage.setItem("email", authResponse.email)
+    this.document.defaultView?.localStorage.setItem("wallet", authResponse.wallet)
     let time = d.getTime()
     this.document.defaultView?.localStorage.setItem("expiresAt", time ? time.toString() : '0')
   }

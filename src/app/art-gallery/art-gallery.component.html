@@ -2,30 +2,23 @@
     <div class="discover-title">Discover</div>
     <input type="text" placeholder="Search">
     <div class="collection-filter-grid">
-        <div class="collection-filter all active">All</div>
-        <div class="collection-filter my-nfts">My NFTs</div>
+        <div id="all-button" class="collection-filter all active" (click)="getAllNfts()">All</div>
+        <div id="my-nfts-button" class="collection-filter my-nfts" (click)="getMyNfts()">My NFTs</div>
     </div>
 </div>
 
 <div class="gallery-container">
-    <div class="gallery-grid">
+    <div class="gallery-grid" *ngFor="let nft of allNfts">
+
         <div class="gallery-grid-item">
-            <img src="../../assets/Mask Group.png" class="nft-image">
-            <p class="nft-name">First Dummy NFT</p>
+            <img [src]="nft.metadata.image" class="nft-image">
+            <p class="nft-name">{{nft.metadata.name}}</p>
             <div class="nft-value-grid ">
-                <p class="nft-value-label">Purchase Value:</p>
-                <p class="nft-value">0.5 SOL</p>
+                <p class="nft-value-label" *ngIf="!myNfts">Purchase Value:</p>
+                <p class="nft-value-label" *ngIf="myNfts">Value:</p>
+                <p class="nft-value">{{nft.price}}</p>
             </div>
-            <button class="buy-button">Buy</button>
-        </div>
-        <div class="gallery-grid-item">
-            <img src="../../assets/Mask Group.png" class="nft-image">
-            <p class="nft-name">Second Dummy NFT</p>
-            <div class="nft-value-grid ">
-                <p class="nft-value-label">Purchase Value:</p>
-                <p class="nft-value">0.78 SOL</p>
-            </div>
-            <button class="buy-button">Buy</button>
+            <button class="buy-button" *ngIf="!myNfts" (click)="transfer(nft)">Buy</button>
         </div>
     </div>
 </div>

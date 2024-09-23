@@ -20,7 +20,8 @@ export const backendRequestInterceptor: HttpInterceptorFn = (req, next) => {
       setHeaders: {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "auth-token": `Bearer ${getToken()}`
+        "Access-Control-Max-Age": "3600",
+        "Authorization": `Bearer ${getToken()}`
       }
     })
       return next(newReq)
