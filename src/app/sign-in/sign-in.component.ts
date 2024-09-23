@@ -2,11 +2,12 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterModule, RouterLink, FormsModule],
   templateUrl: './sign-in.component.html',
   styleUrl: './sign-in.component.css'
 })
