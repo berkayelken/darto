@@ -40,7 +40,7 @@ input {
 }
 
 input::placeholder {
-    padding-left: 12px;
+    padding-left: -12px;
 }
 
 .forgot-password {

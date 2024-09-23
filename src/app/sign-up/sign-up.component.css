@@ -23,6 +23,10 @@
     width: 327px;
 }
 
+.password-input {
+    margin-bottom: 24px;
+}
+
 input {
     margin-top: 12px;
     height: 56px;
@@ -35,7 +39,7 @@ input {
 }
 
 input::placeholder {
-    padding-left: 12px;
+    padding-left: -12px;
 }
 
 .sign-in-container {
