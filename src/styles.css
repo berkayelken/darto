@@ -9,7 +9,7 @@ a {
     text-decoration: none; 
 }
 
-input {
+input,select {
     margin-top: 12px;
     height: 56px;
     border: 0px;
@@ -20,6 +20,10 @@ input {
     width: calc(100% - 24px);
 }
 
-input::placeholder {
+select {
+    width: 100%;
+}
+
+input::placeholder,select::placeholder {
     padding-left: -12px;
 }

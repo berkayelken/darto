@@ -1,13 +1,17 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
-const baseUrl = "http://localhost:4200"
+const baseUrl = "http://localhost:9286"
 
 export const backendRequestInterceptor: HttpInterceptorFn = (req, next) => {
   const reqUrl = baseUrl + req.url
   if(req.url.startsWith("/api/auth")) {
       
       const newReq = req.clone({
-        url: reqUrl
+        url: reqUrl,
+        setHeaders: {
+          "Accept": "application/json",
+          "Access-Control-Max-Age": "3600"
+        }
       })
       return next(newReq)
   } else {

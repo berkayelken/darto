@@ -3,14 +3,16 @@
     <div class="manifest-title">Welcome to darto</div>
 </div>
 <div class="data-container">
-    <input type="text" placeholder="Name">
-    <input type="text" placeholder="Surname">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Username">
-    <input type="password" class="password-input" placeholder="Password">
+    <input type="email" placeholder="Email" [(ngModel)]="email">
+    <select type="text" placeholder="User Type" [(ngModel)]="type"> 
+        <option value="COLLECTOR">Collector</option>
+        <option value="ARTIST">Artist</option>
+    </select>
+    <input type="password" placeholder="Password" [(ngModel)]="password">
+    <input type="password" class="password-input" placeholder="Password Correction" [(ngModel)]="rePassword">
 </div>
 <div class="sign-in-container">
-    <button class="sign-up-button">Sign Up</button>
+    <button class="sign-up-button" (click)="signUp()">Sign Up</button>
     <p class="sign-in-alt-message">Already have an account?</p>
-    <a class="login">Login</a>
+    <a class="login" routerLink="/sign-in">Login</a>
 </div>
