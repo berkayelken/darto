@@ -23,25 +23,15 @@
     width: 327px;
 }
 
-.login-input {
+input {
     margin-top: 12px;
     height: 56px;
-    width: 100%;
     border: 0px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.12);
     color: rgba(255, 255, 255, 0.5);
-}
-
-.sign-up-input {
-    margin-top: 12px;
-    height: 56px;
-    width: 100%;
-    border: 0px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 24px;
+    padding-left: 24px;
+    width: calc(100% - 24px);
 }
 
 input::placeholder {
