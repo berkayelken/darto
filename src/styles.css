@@ -4,3 +4,7 @@ body {
     font-family: "DM Sans";
     background-color: #1F2B42;
 }
+
+a {
+    text-decoration: none; 
+}

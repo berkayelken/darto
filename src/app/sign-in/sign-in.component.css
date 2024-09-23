@@ -1,0 +1,103 @@
+.manifest-container {
+    padding-left: 121px;
+    width: 327px;
+    padding-top: 121px;
+}
+
+.darto-logo {
+    width: 97px;
+    padding-left: calc(50% - 47.5px);
+}
+
+.manifest-title {
+    height: 104px;
+    padding-left: 12px;
+    padding-top: 24px;
+    font-size: 36px;
+    line-height: 52px;
+    color: white;
+}
+
+.data-container {
+    padding-left: 121px;
+    width: 327px;
+    padding-top: 24px;
+}
+
+.login-input {
+    margin-top: 12px;
+    height: 56px;
+    width: 100%;
+    border: 0px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sign-up-input {
+    margin-top: 12px;
+    height: 56px;
+    width: 100%;
+    border: 0px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 24px;
+}
+
+input::placeholder {
+    padding-left: 12px;
+}
+
+.forgot-password {
+    color: #98DED9;
+    text-align: center;
+    font-size: 14px;
+    padding-left: calc(50% - 50px);
+}
+
+.sign-in-container {
+    position: absolute;
+    bottom: 60px;
+    left: 121px;
+    width: 327px;
+    height: 136px;
+}
+
+.login-button {
+    margin-bottom: 24px;
+    height: 56px;
+    width: 100%;
+    border: 0px;
+    border-radius: 8px;
+    background-color:#98DED9;
+    color: #1F2B42;;
+}
+
+.sign-in-alt-message {
+    text-align: center;
+    margin-bottom: 12px;
+    height: 24px;
+    font-size: 12px;
+    color: #CED4DE;
+}
+
+.sign-up {
+    color: #98DED9;
+    text-align: center;
+    margin-left: 16px;
+    font-size: 14px;
+    padding-left: calc(50% - 45px);
+}
+
+@media (max-width: 600px) {
+    .manifest-container {
+        padding-left: 48px !important;
+    }
+    .data-container {
+        padding-left: 48px !important;
+    }
+    .sign-in-container {
+        left: 60px !important;
+    }
+  }
