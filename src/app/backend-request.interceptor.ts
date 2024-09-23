@@ -37,7 +37,6 @@ export const getToken = () => {
     return localStorageToken;
   } else {
     deleteFromLocalStorage("token")
-    deleteFromLocalStorage("name")
     deleteFromLocalStorage("expiresAt")
   }
 
