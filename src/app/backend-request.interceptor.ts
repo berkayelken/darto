@@ -1,6 +1,6 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
-const baseUrl = "http://localhost:9286"
+const baseUrl = "http://Custodial-net-service-env.eba-ygry4ygq.eu-central-1.elasticbeanstalk.com:9286"
 
 export const backendRequestInterceptor: HttpInterceptorFn = (req, next) => {
   const reqUrl = baseUrl + req.url

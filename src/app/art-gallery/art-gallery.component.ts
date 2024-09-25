@@ -22,6 +22,7 @@ export class ArtGalleryComponent {
     }
 
   allNfts: any = []
+  spinnerActive = false;
   myNfts = false
   init = false
 
@@ -31,33 +32,37 @@ export class ArtGalleryComponent {
   }
 
   async getAllNfts() {
+    let button = this.document.getElementById("all-button")
+    if(button?.classList && !button.classList.contains("active")) {
+      button?.classList.add("active")
+    }
+    let myNfts = this.document.getElementById("my-nfts-button")
+    if(myNfts?.classList && myNfts.classList.contains("active")) {
+      myNfts?.classList.remove("active")
+    }
+    this.spinnerActive = true
     this.httpClient.get("/api/nft/all").subscribe(res => {
       this.allNfts = res
       this.myNfts = false
-      let button = this.document.getElementById("all-button")
-      if(button?.classList && !button.classList.contains("active")) {
-        button?.classList.add("active")
-      }
-      let myNfts = this.document.getElementById("my-nfts-button")
-      if(myNfts?.classList && myNfts.classList.contains("active")) {
-        myNfts?.classList.remove("active")
-      }
+      this.spinnerActive = false
     })
   }
 
 
   async getMyNfts() {
+    let button = this.document.getElementById("all-button")
+    if(button?.classList && button.classList.contains("active")) {
+      button?.classList.remove("active")
+    }
+    let myNfts = this.document.getElementById("my-nfts-button")
+    if(myNfts?.classList && !myNfts.classList.contains("active")) {
+      myNfts?.classList.add("active")
+    }
+    this.spinnerActive = true
     this.httpClient.get("/api/nft").subscribe(res => {
       this.allNfts = res
       this.myNfts = true
-      let button = this.document.getElementById("all-button")
-      if(button?.classList && button.classList.contains("active")) {
-        button?.classList.remove("active")
-      }
-      let myNfts = this.document.getElementById("my-nfts-button")
-      if(myNfts?.classList && !myNfts.classList.contains("active")) {
-        myNfts?.classList.add("active")
-      }
+      this.spinnerActive = false
     })
   }
 

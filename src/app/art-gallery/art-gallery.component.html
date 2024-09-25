@@ -8,17 +8,21 @@
 </div>
 
 <div class="gallery-container">
-    <div class="gallery-grid" *ngFor="let nft of allNfts">
+    <div *ngIf="!spinnerActive">
+        <div class="gallery-grid" *ngFor="let nft of allNfts">
 
-        <div class="gallery-grid-item">
-            <img [src]="nft.metadata.image" class="nft-image">
-            <p class="nft-name">{{nft.metadata.name}}</p>
-            <div class="nft-value-grid ">
-                <p class="nft-value-label" *ngIf="!myNfts">Purchase Value:</p>
-                <p class="nft-value-label" *ngIf="myNfts">Value:</p>
-                <p class="nft-value">{{nft.price}}</p>
+            <div class="gallery-grid-item">
+                <img [src]="nft.metadata.image" class="nft-image">
+                <p class="nft-name">{{nft.metadata.name}}</p>
+                <div class="nft-value-grid ">
+                    <p class="nft-value-label" *ngIf="!myNfts">Purchase Value:</p>
+                    <p class="nft-value-label" *ngIf="myNfts">Value:</p>
+                    <p class="nft-value">{{nft.price}}</p>
+                </div>
+                <button class="buy-button" *ngIf="!myNfts" (click)="transfer(nft)">Buy</button>
             </div>
-            <button class="buy-button" *ngIf="!myNfts" (click)="transfer(nft)">Buy</button>
         </div>
     </div>
+    <span class="loader" *ngIf="spinnerActive"></span>
+    
 </div>
