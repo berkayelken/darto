@@ -1,5 +1,5 @@
 .manifest-container {
-    padding-left: 121px;
+    padding-left: calc(50% - 163.5px);
     width: 327px;
     padding-top: 121px;
 }
@@ -11,7 +11,7 @@
 
 .manifest-title {
     height: 104px;
-    padding-left: 12px;
+    padding-left: calc(50% - 163.5px);
     padding-top: 24px;
     font-size: 36px;
     line-height: 52px;
@@ -19,7 +19,7 @@
 }
 
 .data-container {
-    padding-left: 121px;
+    padding-left: calc(50% - 163.5px);
     width: 327px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .sign-in-container {
-    padding-left: 121px;
+    padding-left: calc(50% - 163.5px);
     width: 327px;
     height: 136px;
 }
@@ -58,15 +58,3 @@
     font-size: 14px;
     padding-left: calc(50% - 45px);
 }
-
-@media (max-width: 600px) {
-    .manifest-container {
-        padding-left: 48px !important;
-    }
-    .data-container {
-        padding-left: 48px !important;
-    }
-    .sign-in-container {
-        padding-left: 48px !important;
-    }
-  }

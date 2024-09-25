@@ -2,7 +2,7 @@
     height: 160px;
     width: 327px;
     padding-top: 60px;
-    padding-left: 121px;
+    padding-left: calc(50% - 163.5px)
 }
 
 .discover-title {
@@ -49,7 +49,7 @@
 .gallery-container {
     width: 327px;
     padding-top: 24px;
-    padding-left: 121px;
+    padding-left: calc(50% - 163.5px)
 }
 
 .gallery-grid {
@@ -103,14 +103,3 @@
     background-color:#98DED9;
     color: #1F2B42;;
 }
-
-
-@media (max-width: 600px) {
-    .discover-container {
-        padding-left: 48px !important;
-    }
-
-    .gallery-container {
-        padding-left: 48px !important;
-    }
-  }
